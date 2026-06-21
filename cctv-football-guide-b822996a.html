@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足彩 · 稳定入口与场景指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f7f8fa;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* 导航 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-brand a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-links a {
+      color: #475569;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* 深色头图 Hero */
+    .hero {
+      background: linear-gradient(145deg, #0b1120 0%, #1e293b 100%);
+      color: #e2e8f0;
+      padding: 4.5rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto 2.2rem;
+      color: #cbd5e1;
+    }
+
+    .hero-link {
+      display: inline-block;
+      background-color: #2563eb;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.1s;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+    }
+
+    .hero-link:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* 核心介绍区 */
+    .intro-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 2.5rem;
+    }
+
+    .intro-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    .intro-card h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-left: 5px solid #2563eb;
+      padding-left: 1.2rem;
+    }
+
+    .intro-card p {
+      font-size: 1rem;
+      color: #334155;
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .intro-card a:hover {
+      border-bottom-color: #2563eb;
+    }
+
+    .highlight-list {
+      list-style: none;
+      margin: 1.8rem 0 0.8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+    }
+
+    .highlight-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: #1e293b;
+      font-size: 0.98rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .highlight-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    @media (max-width: 650px) {
+      .highlight-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 三个场景模块 */
+    .scene-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+    }
+
+    .scene-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem 2.2rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      border: 1px solid #edf2f7;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .scene-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      background: #eef2ff;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      text-align: center;
+      border-radius: 16px;
+    }
+
+    .scene-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #0f172a;
+    }
+
+    .scene-card p {
+      color: #475569;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .scene-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    @media (max-width: 800px) {
+      .scene-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    /* FAQ 摘要 / 常见说明 */
+    .faq-area {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.2rem 2rem 4rem;
+    }
+
+    .faq-box {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.4rem 2.8rem;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-box h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e9edf2;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* 页脚 */
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #94a3b8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #e2e8f0;
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="top-nav">
+    <div class="nav-brand"><a href="https://cctv-football-lottery.com">足彩</a></div>
+    <div class="nav-links">
+      <a href="#intro">介绍</a>
+      <a href="#scenes">场景</a>
+      <a href="#faq">说明</a>
+    </div>
+  </header>
+
+  <!-- Hero 深色头图 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>从稳定入口，找到你的 <span>足彩</span> 节奏</h1>
+      <p>不只是信息窗口，更是日常查赛程、看数据、做判断的起点。页面轻简，适应手机与桌面。</p>
+      <a href="https://cctv-football-lottery.com" class="hero-link">足彩</a>
+    </div>
+  </section>
+
+  <!-- 核心介绍区 -->
+  <section class="intro-section" id="intro">
+    <div class="intro-card">
+      <h2>一个安静的起点</h2>
+      <p>
+        很多人习惯打开浏览器直接输入网址，或者在收藏夹里固定一个位置。对于经常关注赛事与竞猜的朋友来说，
+        <a href="https://cctv-football-lottery.com">足彩</a> 这个入口就是一个稳定的落点——
+        没有多余跳转，没有广告干扰，页面加载快，信息结构一目了然。
+      </p>
+      <p>
+        我们把它定位成一个轻量导航页面：顶部有清晰的分区指引，往下是三个常见使用场景，
+        再往下收纳了大家问得最多的问题摘要。不求花哨，只求顺滑。
+      </p>
+      <ul class="highlight-list">
+        <li>赛程与数据模块独立展示</li>
+        <li>无弹窗、无强制跳转</li>
+        <li>深色头图降低视觉负担</li>
+        <li>响应式卡片，手机也可单手操作</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 三个场景模块 -->
+  <section class="scene-wrapper" id="scenes">
+    <div class="scene-grid">
+      <div class="scene-card">
+        <div class="scene-icon">📋</div>
+        <h3>赛前预览</h3>
+        <p>翻看当日对阵、近期交锋、伤停信息；搭配一目了然的表格，不做赘述。</p>
+        <span class="scene-tag">快速浏览</span>
+      </div>
+      <div class="scene-card">
+        <div class="scene-icon">🧩</div>
+        <h3>数据参考</h3>
+        <p>积分、主客场统计、近六场走势——把常用指标放在手边，减少反复切换。</p>
+        <span class="scene-tag">实用聚合</span>
+      </div>
+      <div class="scene-card">
+        <div class="scene-icon">💬</div>
+        <h3>经验闲谈</h3>
+        <p>社区摘选与用户笔记摘要，聊的是看球感受与个人观察，不带倾向引导。</p>
+        <span class="scene-tag">轻内容</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 常见说明 -->
+  <section class="faq-area" id="faq">
+    <div class="faq-box">
+      <h2>📌 常见说明</h2>
+      <div class="faq-item">
+        <div class="faq-q">这个入口跟其他平台有什么区别？</div>
+        <div class="faq-a">更侧重“直达”和“干净”。打开就是所需信息，没有多层菜单和强制下载。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">手机上看会变形吗？</div>
+        <div class="faq-a">完全适配。卡片流式布局，字体和间距按屏幕自动调整，触控友好。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">每天更新哪些内容？</div>
+        <div class="faq-a">赛程、比分、积分保持实时刷新；数据部分每日同步；社区摘录不定期更新。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">链接安全吗？</div>
+        <div class="faq-a">所有外链均经过基础审核，主要链接指向 <a href="https://cctv-football-lottery.com">足彩</a> 自身域名，无第三方跳转。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>保持简单 · <a href="https://cctv-football-lottery.com">足彩</a> 稳定入口 · 仅供信息参考</p>
+    <p style="margin-top: 0.5rem; opacity: 0.5;">页面内容不构成任何形式建议，请理性看待。</p>
+  </footer>
+
+</body>
+</html>
