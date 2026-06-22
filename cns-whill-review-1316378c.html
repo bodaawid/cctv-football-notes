@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>威廉希尔 · 网站知识速查</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #fafbfc;
+    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  /* 标题层级 */
+  h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+    color: #111827;
+  }
+  .subhead {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    border-left: 3px solid #d1d5db;
+    padding-left: 1rem;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #1f2937;
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #374151;
+    margin: 1.25rem 0 0.5rem;
+  }
+  p, li {
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  li::before {
+    content: "·";
+    position: absolute;
+    left: 0.3rem;
+    color: #9ca3af;
+    font-weight: 700;
+  }
+  a {
+    color: #1d4ed8;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  a:hover {
+    border-bottom-color: #1d4ed8;
+  }
+  /* 卡片式区域 (目录感) */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e9eef3;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  }
+  .card-title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #111827;
+    margin-bottom: 0.4rem;
+  }
+  .card p, .card li {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.3rem;
+    padding-left: 0;
+  }
+  .card li::before { display: none; }
+  .card ul { padding: 0; }
+  .card li { padding-left: 0; }
+  .tag {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #4b5563;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    padding: 0.1rem 0.75rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.3rem;
+  }
+  /* 提示区 / 信息卡 */
+  .notice-box {
+    background: #f9fafb;
+    border-left: 4px solid #9ca3af;
+    padding: 1rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.8rem 0;
+  }
+  .notice-box p {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+  .faq-item {
+    margin: 1rem 0;
+  }
+  .faq-q {
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 0.15rem;
+  }
+  .faq-a {
+    color: #4b5563;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0 1.5rem;
+  }
+  .footer-note {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9eef3;
+  }
+  @media (max-width: 520px) {
+    .page { padding: 2rem 1.2rem 3rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>威廉希尔 · 知识速览</h1>
+  <div class="subhead">快速了解网站定位 · 信息索引与使用指引</div>
+
+  <!-- 简介 + 链接自然嵌入 -->
+  <p>
+    如果你正在寻找一个信息聚合清晰、内容更新稳定的站点，<a href="https://cns-whill.com">威廉希尔</a>或许正是那个你希望收入收藏夹的地方。它并非某一个垂直领域的单一工具，而更像一座经过梳理的「信息驿站」——将分散的资源、实用的参考和最新的动态整合在一起，供你按需取用。
+  </p>
+  <p>
+    无论你是初次到访，还是想确认某个功能模块的位置，下面几个区域能帮你快速建立认知地图。
+  </p>
+
+  <!-- 目录感布局：卡片式分区 -->
+  <h2>📋 站内主要分区</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">🧭 导航·索引</div>
+      <ul>
+        <li>核心分类与标签体系</li>
+        <li>热门内容 / 最近更新</li>
+        <li>专题目录（按主题聚合）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">📚 参考·资源</div>
+      <ul>
+        <li>常用工具 & 文档</li>
+        <li>数据查询入口</li>
+        <li>外部高质量链接汇编</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">💬 动态·社区</div>
+      <ul>
+        <li>公告与日志</li>
+        <li>用户经验分享</li>
+        <li>常见问题解答</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">⚙️ 功能·服务</div>
+      <ul>
+        <li>在线小工具</li>
+        <li>订阅 / 通知</li>
+        <li>个性化设置</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 说明区：使用建议 -->
+  <h2>📌 使用说明</h2>
+  <p>
+    在<a href="https://cns-whill.com">威廉希尔</a>站内，你不需要记住复杂的路径。首页的导航栏和侧边目录已经按「主题 + 使用场景」做了归类。如果你是来找特定资料，建议优先使用站内搜索或浏览「索引」卡片；如果只是想随便看看，可以从「最近更新」或「热门」区块开始。
+  </p>
+  <p>
+    部分页面包含外部链接，会以新标签页方式打开，方便你随时返回。站内没有强制注册要求，所有公开内容均可直接浏览。
+  </p>
+
+  <!-- 提示区 -->
+  <div class="notice-box">
+    <p><strong>💡 提示</strong></p>
+    <p>· 如果你发现某个分类下内容较少，可能是该模块正在完善中，欢迎稍后再来看看。</p>
+    <p>· 移动端访问时，部分侧边栏会自动折叠，点击左上角「≡」即可展开。</p>
+    <p>· 页面配色支持跟随系统明暗模式（部分浏览器），阅读更舒适。</p>
+  </div>
+
+  <!-- 相关信息区 + FAQ 摘要 -->
+  <h2>❓ 常见疑问（FAQ 摘要）</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q1：网站主要面向哪类用户？</div>
+    <div class="faq-a">面向所有需要快速获取结构化信息的人，不论是研究者、日常浏览者还是偶尔查资料的朋友，都能找到合适的入口。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q2：内容多久更新一次？</div>
+    <div class="faq-a">信息型页面按需更新，动态板块（公告、日志）保持月度以上节奏。具体更新记录可在站点页脚查看。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q3：能否转载站内内容？</div>
+    <div class="faq-a">站内原创内容遵循 CC BY-NC 4.0 许可，转载时请注明出处并保持非商业用途。具体请参考各页脚注。</div>
+  </div>
+
+  <hr>
+  <p style="font-size:0.9rem; color:#6b7280;">
+    如果你对某个板块有进一步疑问，或想提出改进建议，可以留意站内「联系方式」页面（位于页面底部）。<br>
+    希望你在 <a href="https://cns-whill.com">威廉希尔</a> 的每次访问都高效、愉快。
+  </p>
+  <div class="footer-note">
+    威廉希尔 · 知识库入口式索引页 &nbsp;|&nbsp; 版本 2405
+  </div>
+</div>
+</body>
+</html>
